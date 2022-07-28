@@ -22,18 +22,16 @@ public class Schedule {
     } else {
       System.out.println("Block " + classToAdd.getBlock() + " is already full.");
     }
-    System.out.println("Class Added");
   }
 
   public void dropClass(int classBlock) {
     this.reference.returnClassToDatabase(this.classesIDMirror[classBlock - 1]);
     this.classesInSchedule[classBlock - 1] = blank;
-    System.out.println("Class Dropped");
   }
 
   public void print() {
     for(int things = 0; things < 4; things++) {
-      System.out.println("Block " + (things + 1) + ": " + this.classesInSchedule[things].getName());
+      System.out.println("Block " + things + ": " + this.classesInSchedule[things].getName());
     }
     
   }

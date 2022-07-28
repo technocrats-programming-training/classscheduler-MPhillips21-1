@@ -14,17 +14,24 @@ public class App {
     int blockOfClass;
     String nameOfClass;
     String teacherOfClass;
+    int choosethBlock;
     int chosenID;
     int chosenBlock;
 
     while (cci < numberOfClasses) {
       System.out.println("\n" + "Block: ");
       try {
-        blockOfClass = yma.nextInt();
+        choosethBlock = yma.nextInt();
         yma.nextLine();
       } catch (InputMismatchException notAnInt) {
         System.out.println("\n" + "This should be an integer.");
         yma.nextLine();
+        continue;
+      }
+      if ((choosethBlock > 0) && (choosethBlock < 5)) {
+        blockOfClass = choosethBlock;
+      } else {
+        System.out.println("\n" + "Not a valid block");
         continue;
       }
       System.out.println("\n" + "Name:");
