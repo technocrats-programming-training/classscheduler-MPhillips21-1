@@ -19,10 +19,10 @@ public class Schedule {
       this.classesInSchedule[classToAdd.getBlock() - 1] = classToAdd;
       this.reference.useClass(clasID);
       this.classesIDMirror[classToAdd.getBlock() - 1] = clasID;
+      System.out.println("Class Added");
     } else {
       System.out.println("Block " + classToAdd.getBlock() + " is already full.");
     }
-    System.out.println("Class Added");
   }
 
   public void dropClass(int classBlock) {

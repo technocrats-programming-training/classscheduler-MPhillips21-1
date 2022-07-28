@@ -62,7 +62,6 @@ public class App {
             schedule.addClassToSchedule(chosenID);
           } else {
             System.out.println("\n" + "Not a valid ID");
-            yma.nextLine();
             break;
           }
           break;
@@ -81,7 +80,6 @@ public class App {
             schedule.dropClass(chosenBlock);
           } else {
             System.out.println("\n" + "Not a valid block");
-            yma.nextLine();
             break;
           }
           break;
